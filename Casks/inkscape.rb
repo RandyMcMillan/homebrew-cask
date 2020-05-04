@@ -5,10 +5,12 @@ cask 'inkscape' do
   # inkscape.global.ssl.fastly.net was verified as official when first introduced to the cask
   url "https://inkscape.global.ssl.fastly.net/media/resources/file/Inkscape-#{version}-x11-10.7-x86_64.dmg"
   name 'Inkscape'
+  desc "Professional vector graphics editor"
   homepage 'https://inkscape.org/'
   license :gpl
 
   depends_on x11: true
+  depends_on xquartz: true
 
   app 'Inkscape.app'
   binary "#{appdir}/Inkscape.app/Contents/Resources/bin/inkscape"
